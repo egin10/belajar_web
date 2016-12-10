@@ -12,5 +12,4 @@ if(isset($_POST))
 
 	echo "Data berhasil di input!, <a href='index.php'> Kembali </a>";
 }
-
 ?>
