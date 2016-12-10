@@ -14,18 +14,18 @@ $data = mysql_fetch_array($query);
 <body>
 	<h1>Form Edit Data</h1>
 	<table>
-	<form action="update.php" method="POST">
+	<form action="prosesUpdate.php" method="POST">
+		<tr>
+			<!-- <td>Nim</td> -->
+			<td> <input type="hidden" name="nim" value="<?php echo $data['nim'] ?>"></td>
+		</tr>
 		<tr>
 			<td>Nama</td>
 			<td>: <input type="text" name="nama" value="<?php echo $data['nama']; ?>"></td>
 		</tr>
 		<tr>
-			<td>Nim</td>
-			<td>: <input type="text" name="nim" disabled value="<?php echo $data['nim'] ?>"></td>
-		</tr>
-		<tr>
 			<td>Password</td>
-			<td>: <input type="text" name="password" value="<?php echo $data['password'] ?>"></td>
+			<td>: <input type="text" name="password" value="<?php echo $data['password']; ?>"></td>
 		</tr>
 		<tr>
 			<td>Semester</td>
