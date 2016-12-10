@@ -16,20 +16,31 @@
 </head>
 <body>
 	<h1>Data Mahasiswa</h1>	
+
+	<table border=1>
+	   <tr bgcolor="grey">
+	   <td>Nama</td>
+	   <td>Nim</td>
+	   <td>Password</td>
+	   <td>Semester</td>
+	   </tr>
 	
 	<?php 
 		$query = mysql_query("SELECT * FROM data_mhs");
 
 		while ($data = mysql_fetch_array($query)) {
-			echo "<p>"
+			echo "<tr><td>"
 				.$data['nama'].
-				"<br>".
+				"</td><td>".
 				$data['nim'].
-				"<br>".
+				"</td><td>".
 				$data['password'].
-				"<br>".
+				"</td><td>".
 				$data['semester'].
-				"</p>";
+				"</tr><td>".
+				"<a href='edit_mhs.php?nim=".$data['nim']."'>Edit</a>"
+				" | <a href='edit_mhs.php?nim=".$data['nim']."'>Edit</a>"
+				"</td></tr>";
 		}
 	?>
 		
