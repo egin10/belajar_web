@@ -17,22 +17,34 @@
 <body>
 	<h1>Data Mahasiswa</h1>	
 	
+	<table border=1>	
+		<tr bgcolor="blue">
+			<td>Nama </td>
+			<td>NIM</td>
+			<td>Password</td>
+			<td>Semester</td>
+			<td>Action</td>
+		</tr>
+	
 	<?php 
 		$query = mysql_query("SELECT * FROM data_mhs");
 
 		while ($data = mysql_fetch_array($query)) {
-			echo "<p>"
-				.$data['nama'].
-				"<br>".
+			echo "<tr><td>".
+				$data['nama'].
+				"</td><td>".
 				$data['nim'].
-				"<br>".
+				"</td><td>".
 				$data['password'].
-				"<br>".
+				"</td><td>".
 				$data['semester'].
-				"</p>";
+				"</td><td>".
+				"<a href='edit_mhs.php?nim=".$data['nim']."'>edit</a>".
+				"<a href='delete_mhs.php?nim=".$data['nim']."'>Delete</a>".
+				"</tr>";
 		}
 	?>
-		
+		</table>
 	<!-- paragraf ke-1 -->
 	<!-- <p>
 		<?php echo $namaMhs; ?> <br>
