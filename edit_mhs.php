@@ -4,7 +4,6 @@ include ('koneksi.php');
 $nim = $_GET['nim'];
 $query = mysql_query("SELECT * FROM data_mhs WHERE nim = '$nim'");
 $data = mysql_fetch_array($query);
-
 ?>
 
 <!DOCTYPE html>
