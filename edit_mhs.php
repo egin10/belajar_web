@@ -20,18 +20,18 @@
 		<?php while($r_edit = mysql_fetch_array($s_edit)) { ?>
 		<tr>
 		<td>nama</td>
-		<td>: <input type = "text" name = "nama" value = " <?php echo $r_edit['nama'] ; ?>" ></td>
+		<td>: <input type = "text" name = "nama" value = "<?php echo $r_edit['nama'] ; ?>" ></td>
 		</tr>
 
 		<tr>
 		<td>NIM</td>
-		<td>: <input type = "text" name = "nim" value = " <?php echo $r_edit['nim'] ; ?>" disabled>
+		<td>: <input type = "text" name = "nim" value = "<?php echo $r_edit['nim'] ; ?>" disabled>
 		<input type = "text" name = "nim" value = " <?php echo $r_edit['nim'] ; ?>" hidden></td>
 		</tr>
 
 		<tr>
 		<td>password</td>
-		<td>: <input type = "text" name = "password" value = " <?php echo $r_edit['password'] ; ?>" ></td>
+		<td>: <input type = "text" name = "password" value = "<?php echo $r_edit['password'] ; ?>" ></td>
 		</tr>
 
 		<tr>

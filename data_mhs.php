@@ -1,10 +1,3 @@
-<!-- <?php 
-	$namaMhs = $_POST['nama'];	
-	$nimMhs = $_POST['nim'];
-	$pass = $_POST['password'];
-	$smtr = $_POST['semester'];
-?>
- -->
  <?php 
  include ('koneksi.php');
  ?>

@@ -1,4 +1,5 @@
-<?php include "koneksi.php";
+<?php 
+include "koneksi.php";
 	if($_POST['submit'])
 	{
 		$nama = $_POST['nama'];
@@ -6,14 +7,19 @@
 		$password = $_POST['password'];
 		$semester = $_POST['semester'];
 
+		//echo $nama . " " . $nim . " " . $password . " " . $semester ;
+
 		$q_insert = "UPDATE data_mhs 
-					 set nama = '$nama', password = '$password', semester = '$semester'
-					 WHERE nim = '$nim' "  ;
+					 SET nama ='$nama', password ='$password', semester ='$semester'
+					 WHERE nim = $nim ; " ;
+
 		$s_insert = mysql_query($q_insert);
 
 		if($s_insert)
 		{
 			echo "data telah berhasil di update. " ;
+			echo $nama . " " . $nim . " " . $password . " " . $semester ;
+
 		}
 		else
 		{
