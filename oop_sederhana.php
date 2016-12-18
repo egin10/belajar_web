@@ -18,7 +18,6 @@ Class Data {
 	}
 }
 
-
 Class Mhs extends Data{
 
 	public function masukanData($nama, $nim, $kelas){
